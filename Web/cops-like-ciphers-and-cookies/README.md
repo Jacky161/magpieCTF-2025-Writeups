@@ -41,14 +41,14 @@ We found out fairly early on that within the head of the HTML of the site, there
 
 ![base64 encoded string hidden in the site description](img/Inspect_Element_2.png)
 
- Decoding this string leaves us with the message ```vigenere```, alluding to vigenere cipher. This likely means the browser cookie is encoded using it. But what could be the key? After being stuck here for quite a long time and coming back to the challenge, we realized it was staring us in the face the whole time.
+Decoding this string leaves us with the message ```vigenere```, alluding to vigenere cipher. This likely means the browser cookie is encoded using it. But what could be the key? After being stuck here for quite a long time and coming back to the challenge later on, we realized it was staring us in the face the whole time.
 
- ![Consistency is Key](img/consistency-is-key.png)
+![Consistency is Key](img/consistency-is-key.png)
 
- Of course. Decoding the browser cookies using Vigenere Cipher and ```consistency``` as the key, we can find out that the ```Name``` field of the cookie decodes to ```current-user``` and the value decodes to ```guest```. Let's encode the username ```admin``` which encodes to ```crzav``` and place that in the value field of our cookie. Refreshing the login page and...
+Of course. Decoding the browser cookies using Vigenere Cipher and ```consistency``` as the key, we can find out that the ```Name``` field of the cookie decodes to ```current-user``` and the value decodes to ```guest```. Let's encode the username ```admin``` which encodes to ```crzav``` and place that in the value field of our cookie. Refreshing the login page and...
 
- ![Success!](img/success.png)
+![Success!](img/success.png)
 
- Success!
+Success!
 
- **Flag:** magpieCTF{wh3r3_w4s_Jake}
+**Flag:** magpieCTF{wh3r3_w4s_Jake}

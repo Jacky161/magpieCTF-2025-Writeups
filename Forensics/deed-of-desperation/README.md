@@ -22,7 +22,7 @@ Fortunately for us, there are many vulnerabilities in certain kinds of encrypted
 
 ![flag.txt properties](img/NanaZip_flagTXT_Properties.png)
 
-We can see the file was compressed with the ZipCrypto encryption method and compressed using the Store method. ZipCrypto is an old zip encryption algorithm that can be vulnerable to plaintext attacks. As long as we know at least 11 bytes of the plaintext in that file, we can try to crack the keys! Store means the file was not compressed which is a requirement for this kind of attack.
+We can see the file was compressed with the ZipCrypto encryption method and compressed using the Store method. ZipCrypto is an old zip encryption algorithm that can be vulnerable to plaintext attacks. As long as we know at least 11 bytes of the plaintext in that file and the file wasn't compressed (i.e. Store method was used) we can try to crack the keys!
 
 Since we'd imagine this file should contain the flag, we know that it should start with ```magpieCTF{```. You might notice though that this isn't quite enough yet as this is only 10 bytes. However, we also know that the last character of the file most likely is a ```}``` which gives us 11 bytes. We can eek out another byte by knowing that most Linux text editors will always terminate a textfile with an extra newline character at the end of the file. Windows editors like notepad don't do this. So we have 12 bytes total. Perfect.
 
@@ -43,3 +43,6 @@ Now that we have our unlocked zip file, we can unzip the contents and reveal our
 **Flag:** magpieCTF{WH4T_D1D_T3RRY_S1GN}
 
 The form.pdf reveals that Terry Blue seems to have been selling his home. Maybe his finances aren't looking so great.
+
+## Pitfalls:
+We stumbled into quite a bit of trouble just after finding the comment in base64. It turns out that this comment didn't have anything to do with the solution (?). For quite a while, our team was running around in circles trying to figure out what this comment had to do with the problem. It didn't help that we did try to use ```steghide``` rather early on, except instead of providing a blank password, every time I used it, I provided it with either the base64 string as the password or the decoded one... It took quite a while to figure out that actually, if we just didn't give it a password, it would work. Sometimes things are less complicated than we like to think!

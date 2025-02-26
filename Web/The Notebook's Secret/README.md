@@ -1,4 +1,4 @@
-# The Notebook's Secret - Category: Forensics
+# The Notebook's Secret - Category: Web
 
 >Another late night at the precinct, another piece of evidence to sift through. This time, it's Professor Richard Hash's research notebook. Your partner, Edward Cors, leans back in his chair. "I don't know, this feels like it's pointing straight at Hash. The guy's always preaching about transparency, about making everything public. Maybe he decided to take matters into his own hands." But something about the notebook catches your eye. The last entry, dated February 21st, 1933, one day before Krypto's murder, hints at an unexpected development. It seems Krypto and Hash were on the verge of announcing something big.
 >

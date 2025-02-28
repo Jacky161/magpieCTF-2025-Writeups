@@ -1,6 +1,6 @@
 # Corrupted image - Category: Forensics
 
-> The given image will not open properly, even though it is a standard .png file! Your job is to extract the information from the image
+>The given image will not open properly, even though it is a standard .png file! Your job is to extract the information from the image
 
 Indeed, opening the image definitely does not work. I tried a couple of different image viewers and none of them seem to work. Exiftool also does not work, giving a file format error. Let's take a look at the file in a hex editor. I'll use HxD here.
 

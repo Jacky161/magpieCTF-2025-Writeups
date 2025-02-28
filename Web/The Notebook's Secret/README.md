@@ -15,12 +15,12 @@ The question is, can we actually execute Python code? Adding a new cell, we can 
 
 ![find_research_files function output](img/JupyterNotebook_find_research_files.png)
 
-Seems like we do have some backup files! We can list the files in that folder to see a suspicious looking ".keys" folder. Inside this folder lies an SSH private key! Most likely it corresponds to ckrypto's account. I would show you but seems like someone deleted it so I can't grab an image of it to show here. But I do promise it was there when I solved the challenge.
+Seems like we do have some backup files! We can list the files in that folder to see a suspicious looking ".keys" folder. Inside this folder is supposed to lie an SSH private key which belongs to ckrypto's user. I would show you but seems like someone deleted it so I can't grab an image of it to show here. Actually, if you want the true story, this folder was also completely empty when I first attempted the challenge. What I actually did back then was to inject my own SSH key into rhash's .ssh folder and SSHed in that way. After poking around for a while, I eventually found ckrypto's SSH key within that .keys folder which I assume is when the challenge was fixed.
 
 ![Directory listing of the empty backup folder](img/JupyterNotebook_sabotaged.png)
 *Sabotage!*
 
-After that, we can simply SSH into the machine, logging in as ckrypto, and using the private key we obtained.
+After getting the key one way or another, we can simply SSH into the machine, logging in as ckrypto, and using the private key we obtained.
 
 ```ssh ckrypto@challenges.magpiectf.ca -p 2222 -i <path to private key>```
 
@@ -29,6 +29,3 @@ After snooping around in ckrypto's home directory, we can find a suspicious look
 ![Directory listing of ckrypto's home directory and catting out the flag](img/ssh_ckrypto.png)
 
 **Flag**: magpieCTF{cryp70_k3y_4cc3ss_gr4nt3d}
-
-## Sidenotes
-You can actually SSH in as rhash if you add your own SSH private key to rhash's home directory. This can easily be done through Python. I actually did this at first when I initially solved this challenge since the backup directory was completely empty back then too. Someone really loves sabotaging this challenge. I didn't really know what to do but I knew it had something to do with SSH so I tried to inject my own private key. After logging in and poking around for a while, I noticed the challenge was fixed and I was able to obtain ckrypto's private key from the backup folder mentioned.

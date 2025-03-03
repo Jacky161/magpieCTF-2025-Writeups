@@ -18,4 +18,4 @@ Let's take a look at the developer tools and see what we can find.
 
 There seems to be an element with its contents encoded in base64 at the bottom there. Decoding it gives us the flag!
 
-**Flag:** magpieCTF{$p1d3r_W4$_H3r3}
+**Flag:** magpieCTF{$p1d3r\_W4$\_H3r3}

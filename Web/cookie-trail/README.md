@@ -8,28 +8,28 @@
 >
 >Edward Cors - NYPD
 
-![The Website](img/website.png)
+<img src="img/website.png" alt="The Website" width="700"/>
 
-We're greeted by a rather blank looking page. It seems everything in this challenge really wants us to look at our cookies. So let's do just that!
+We're greeted by a rather blank looking page. I don't know about you but it really seems like it wants us to look at our cookies. Let's do just that.
 
-![Firefox developer tools, showing no cookies](img/cookies_initial.png)
+<img src="img/cookies_initial.png" alt="Firefox developer tools, showing no cookies" width="700"/>
 
-Nothing?? Well, I suppose it would be too easy if there was something there. Taking a look through the HTML source doesn't reveal anything particularily interesting. Let's try just inputting something random and hitting search on the site.
+Nothing? Well, I suppose it would be too easy if there was something there. Taking a look through the HTML source doesn't reveal anything particularily interesting. Let's try just inputting something random and hitting search on the site.
 
-![The Website after hitting search](img/website2.png)
+<img src="img/website2.png" alt="The Website after hitting search" width="500"/>
 
 Maybe now we'll have something in our cookies? And indeed we do!
 
-![New cookie dropped](img/cookies_2.png)
+<img src="img/cookies_2.png" alt="New cookie dropped" width="700"/>
 
 My immediate thought is to try and mess around with this cookie. Let's just try changing the value to 1 and see what happens. If we do that and reload the page, we get a new part of the story!
 
-![Part 1 of Spider's Story](img/website3.png)
+<img src="img/website3.png" alt="Part 1 of Spider's Story" width="500"/>
 
 If we keep increasing the number and refreshing, the story continues. After inputting a value of 10, we get the following:
 
-![Part 10 of Spider's Story + the flag](img/website4.png)
+<img src="img/website4.png" alt="Part 10 of Spider's Story + the flag" width="700"/>
 
 Nice!
 
-**Flag:** magpieCTF{chr15t1n@_3xp0$3d_$p1d3r}
+**Flag:** magpieCTF{chr15t1n@\_3xp0$3d\_$p1d3r}

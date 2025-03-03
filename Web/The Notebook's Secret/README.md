@@ -15,17 +15,22 @@ The question is, can we actually execute Python code? Adding a new cell, we can 
 
 ![find_research_files function output](img/JupyterNotebook_find_research_files.png)
 
-Seems like we do have some backup files! We can list the files in that folder to see a suspicious looking ".keys" folder. Inside this folder is supposed to lie an SSH private key which belongs to ckrypto's user. I would show you but seems like someone deleted it so I can't grab an image of it to show here. Actually, if you want the true story, this folder was also completely empty when I first attempted the challenge. What I actually did back then was to inject my own SSH key into rhash's .ssh folder and SSHed in that way. After poking around for a while, I eventually found ckrypto's SSH key within that .keys folder which I assume is when the challenge was fixed.
+Seems like we do have some backup files! We can list the files in that folder to see a suspicious looking ".keys" folder. Inside this folder is supposed to lie an SSH private key which belongs to ckrypto's user. I would show you but seems like someone deleted it so I can't grab an image of it to show here. 
 
 ![Directory listing of the empty backup folder](img/JupyterNotebook_sabotaged.png)
-*Sabotage!*
+
+Actually, if you want the true story, this folder was also completely empty when I first attempted the challenge. What I actually did back then was to inject my own SSH key into rhash's .ssh folder and SSHed in that way. I used this python snippet to do just that. 
+
+![Injecting my own SSH key](img/JupyterNotebook_injectSSH.png)
+
+After getting in and poking around for a while, I eventually found ckrypto's SSH key within that .keys folder which I assume is when the challenge was fixed.
 
 After getting the key one way or another, we can simply SSH into the machine, logging in as ckrypto, and using the private key we obtained.
 
 ```ssh ckrypto@challenges.magpiectf.ca -p 2222 -i <path to private key>```
 
-After snooping around in ckrypto's home directory, we can find a suspicious looking ```.private``` directory, and within it, the flag!
+After snooping around in ckrypto's home directory, we can find a suspicious looking `.private` directory, and within it, the flag!
 
 ![Directory listing of ckrypto's home directory and catting out the flag](img/ssh_ckrypto.png)
 
-**Flag**: magpieCTF{cryp70_k3y_4cc3ss_gr4nt3d}
+**Flag**: magpieCTF{cryp70\_k3y\_4cc3ss\_gr4nt3d}

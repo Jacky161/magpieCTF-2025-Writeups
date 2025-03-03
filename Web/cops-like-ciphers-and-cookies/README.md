@@ -24,14 +24,18 @@ We sure love base64 arond here. Decoding this string gives us the message ```We 
 
 Immediately, this tells us we should probably browse to the /login page. We're greeted by a rather funny looking "login" page. Interestingly, the username and password form fields don't seem to work.
 
-![NYPD Deprecated Login Page](img/Login_Page.png)
-*Let's hope that admin is feeling a little lazy*
+<div>
+    <img src="img/Login_Page.png" alt="NYPD Deprecated Login Page"/>
+    <p>
+        <em>Let's hope that admin is feeling a little lazy</em>
+    </p>
+</div>
 
 The mention of cookies immediately gives us a clue that, well, we should look at our cookies. And indeed, we have something!
 
 ![Browser Cookies](img/Cookies_1.png)
 
-Looks like gooble-dy-goop. Seems like it's been run through some sort of cipher. At this point, our team tried a few fun ideas, including but not limited to:
+Looks like gobble-dy-goop. Seems like it's been run through some sort of cipher. At this point, our team tried a few fun ideas, including but not limited to:
 
 1. Adding our own username and password cookies
 2. Fixing the login page by unlocking the username and password fields and adding a submit button to try and login
@@ -45,10 +49,10 @@ Decoding this string leaves us with the message ```vigenere```, alluding to vige
 
 ![Consistency is Key](img/consistency-is-key.png)
 
-Of course. Decoding the browser cookies using Vigenere Cipher and ```consistency``` as the key, we can find out that the ```Name``` field of the cookie decodes to ```current-user``` and the value decodes to ```guest```. Let's encode the username ```admin``` which encodes to ```crzav``` and place that in the value field of our cookie. Refreshing the login page and...
+Of course. Decoding the browser cookies using Vigenere Cipher and `consistency` as the key, we can find out that the `Name` field of the cookie decodes to `current-user` and the value decodes to `guest`. Let's encode the username `admin` which encodes to `crzav` and place that in the value field of our cookie. Refreshing the login page and...
 
 ![Success!](img/success.png)
 
 Success!
 
-**Flag:** magpieCTF{wh3r3_w4s_Jake}
+**Flag:** magpieCTF{wh3r3\_w4s\_Jake}

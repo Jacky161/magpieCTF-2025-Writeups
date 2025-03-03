@@ -14,16 +14,16 @@ To compare, let's try opening a proper PNG file and see if we can see any differ
 
 It seems like the very first byte is different between the two files. The proper PNG starts with 0x89 while the corrupted one starts with 0x98. Checking with a few other random PNGs, we can see they all start with 0x89. Let's quickly verify by looking up the proper PNG header.
 
-![Wikipedia page for PNG files, showing the file header section](img/PNG_Header.png)
+<img src="img/PNG_Header.png" alt="Wikipedia page for PNG files, showing the file header section" width="300"/>
 
 The wikipedia page for PNG files shows that they should start with 0x89! Let's change this in our corrupted PNG and see if that helps. After making the change and trying to open the file...
 
-![Showing what the fixed png file looks like](img/fixedPNG.png)
-*Now we're in business.*
+<img src="img/fixedPNG.png" alt="The Fixed PNG file which reveals a QR Code" width="300"/>
 
 We're greeted with a QR code! If you're smart, you can use something like [CyberChef](https://gchq.github.io/CyberChef/) or any online tool to read the QR code image. Or... you can be like me, scan the QR code with your phone, and read the flag manually.
 
-![Screenshot of the camera app on a Phone scanning the QR code](img/CameraQRCodeScanningBecauseItsFunny.png)
-*Maybe not my brightest idea but it did work.*
+<img src="img/CameraQRCodeScanningBecauseItsFunny.png" alt="Screenshot of the camera app on a Phone scanning the QR code" width="200"/>
+
+Maybe not my brightest idea but it did work.
 
 **Flag:** magpieCTF{h3x-3d!t-fix}

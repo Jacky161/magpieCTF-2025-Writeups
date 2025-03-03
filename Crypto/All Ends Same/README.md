@@ -60,4 +60,4 @@ From what we can gather from the code, it seems like the flag is encrypted using
 
 Easy peasy!
 
-**Flag:** magpieCTF{s4m3_g04l_d1ff3r3nt_f0rm4t}
+**Flag:** magpieCTF{s4m3\_g04l_d1ff3r3nt\_f0rm4t}

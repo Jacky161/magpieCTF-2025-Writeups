@@ -1,5 +1,9 @@
 # Numbers to Fights - Category: Crypto
 
+>Christina Krypto's Diaries:
+>
+>"Professor Richard Hash believes that cryptography should remain rigid and bound by outdated principles, and he sees my innovations as a threat to his traditional methods. But what he doesn't understand is that the world is evolving. Numbers alone aren’t enough to protect our digital communication anymore—they can be left vulnerable.The future of cryptography is about moving beyond the constraints of the past, and I’m leading the way."
+
 The provided `output.txt` contains a very loooooong number.
 
 ```12665394834264763794106437036616675274345928889080203342691794650101329828215165```

@@ -26,8 +26,8 @@ Immediately, this tells us we should probably browse to the /login page. We're g
 
 <div>
     <img src="img/Login_Page.png" alt="NYPD Deprecated Login Page"/>
-    <p>
-        <em>Let's hope that admin is feeling a little lazy</em>
+    <p style="margin-top: 0px;">
+        <em>Let's hope that admin is feeling a little lazy.</em>
     </p>
 </div>
 

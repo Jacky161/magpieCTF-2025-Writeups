@@ -24,7 +24,7 @@ The first result of searching "morse code audio decoder" brings us to the [follo
 
 <div>
     <img src="img/MorseCodeWorld.png" alt='morsecode.world - Adaptive Audio Decoder' width="400"/>
-    <p>
+    <p style="margin-top: 0px;">
         <em>An experimental tool you say?</em>
     </p>
 </div>

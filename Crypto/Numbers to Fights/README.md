@@ -8,7 +8,7 @@ Other than that, there isn't any other information so we'll have to find the fla
 
 It seems to just be a decimal (base 10) number from the looks of it. My first thought is that maybe if we split the digits up into groups of two, the digits will represent ASCII characters. So the first two digits are 12, then 66, 53, etc. But that quickly doesn't really make sense since the ASCII character 12 is not an actual printing character if you look on an ASCII table. So we'll have to dig a little deeper than that.
 
-Another thought. Maybe this number actually already is the flag! The idea is if we turn this number into base-2 and then seperate it into groups of 8 digits (8 bits is 1 byte), maybe then the bytes will form some text. Each ASCII character is represented by 1 byte so we may get some text perhaps. We can use a very simple python script to read the number, and turn it into its byte representation.
+Another thought. Perhaps we're on the right track but we're using the **wrong base**. The idea is if we turn this number into base-2 and then seperate it into groups of 8 digits (8 bits is 1 byte), maybe then the bytes will then form some text. Each byte can be translated into its corresponding ASCII character. Instead of doing it by hand, we can use a very simple python script to read the number, turn it into its byte representation, and print it out.
 
 ```python
 with open("output.txt", "r", encoding="utf-8") as f:
@@ -23,6 +23,6 @@ print(the_bytes)
 
 Output: `b'magpieCTF{numb3r_t0_t3xt_1s_34sy}'`
 
-Printing out the output, we get the flag! When printing, Python will very helpfully turn the bytes into text to show on the screen, if it can.
+Printing out the output, we get the flag! When printing, Python will very helpfully turn the bytes into ASCII text to show on the screen, if it can.
 
 **Flag:** magpieCTF{numb3r\_t0\_t3xt\_1s\_34sy}

@@ -23,7 +23,7 @@ Actually, if you want the true story, this folder was also completely empty when
 
 ![Injecting my own SSH key](img/JupyterNotebook_injectSSH.png)
 
-After getting in and poking around for a while, I eventually found ckrypto's SSH key within that .keys folder which I assume is when the challenge was fixed.
+After getting in and poking around for a while, I eventually found ckrypto's SSH key within that .keys folder which I assume is when the challenge was fixed. Since I was SSHed in, I was easily able to read the contents of the file and get the private key. The expected way to do this I would assume would be to use Python to print out the contents of the private key file within the .keys folder.
 
 After getting the key one way or another, we can simply SSH into the machine, logging in as ckrypto, and using the private key we obtained.
 

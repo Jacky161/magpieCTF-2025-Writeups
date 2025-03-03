@@ -18,9 +18,9 @@ Another thought. Perhaps we're on the right track but we're using the **wrong ba
 with open("output.txt", "r", encoding="utf-8") as f:
     the_number: int = int(f.read().strip())
 
-# The 33 represents the number of bytes to convert the given number into. We can guess some arbitrary numbers
-# if we don't know what it would be. Putting more than 33 will just result in some padding being placed around
-# the flag.
+# The 33 represents the number of bytes to convert the given number into. 
+# We can guess some arbitrary numbers if we don't know what it would be. 
+# Putting more than 33 will just result in some padding being placed around the flag.
 the_bytes: bytes = the_number.to_bytes(33)
 print(the_bytes)
 ```

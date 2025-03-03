@@ -22,10 +22,12 @@ The video seems to be some generic stock footage but what's more interesting is 
 
 The first result of searching "morse code audio decoder" brings us to the [following lovely site](https://morsecode.world/international/decoder/audio-decoder-adaptive.html).
 
-
-<img src="img/MorseCodeWorld.png" alt='morsecode.world - Adaptive Audio Decoder' width="400"/>
-
-*An experimental tool you say?*
+<div>
+    <img src="img/MorseCodeWorld.png" alt='morsecode.world - Adaptive Audio Decoder' width="400"/>
+    <p>
+        <em>An experimental tool you say?</em>
+    </p>
+</div>
 
 Perfect. Seems like this should hopefully work! Let's download the shorts audio using YT-DLP and feed it into the decoder. The output from YT-DLP is a webm file, so we can use Audacity to easily convert it to a wav file. After throwing the file into the decoder and hitting play...
 

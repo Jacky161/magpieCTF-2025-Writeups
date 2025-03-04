@@ -2,17 +2,17 @@
 
 This repository contains writeups written by Jacky161 for the following challenges for magpieCTF 2025.
 
-Crypto
+### Crypto
 - All Ends Same
 - Numbers to Fights
 
-Forensics
+### Forensics
 - Cat Pics
 - Corrupted image
 - Deed of Desperation
 - Mansion-Recovery
 
-Web
+### Web
 - cookie-trail
 - cops-like-ciphers-and-cookies
 - hidden-flag

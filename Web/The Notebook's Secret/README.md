@@ -17,6 +17,8 @@ The question is, can we actually execute Python code? Adding a new cell, we can 
 
 Seems like we do have some backup files! We can list the files in that folder to see a suspicious looking ".keys" folder. Inside this folder is supposed to lie an SSH private key which belongs to ckrypto's user. I would show you but seems like someone deleted it so I can't grab an image of it to show here. 
 
+EDIT: Apparently I'm trolling and according to the official writeup, the key is in `/home/rhash/.local/share/research_data`. I apparently forgot this in between me solving the challenge and writing this writeup. Just note the rest of this writeup is unedited and the challenge (likely) wasn't actually broken.
+
 ![Directory listing of the empty backup folder](img/JupyterNotebook_sabotaged.png)
 
 Actually, if you want the true story, this folder was also completely empty when I first attempted the challenge. What I actually did back then was to inject my own SSH key into rhash's .ssh folder and SSHed in that way. I used this python snippet to do just that. 
